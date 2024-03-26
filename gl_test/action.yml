@@ -60,13 +60,13 @@ runs:
         # make will return success even if the test fails, so check for failure in the results.xml
         ! grep failure results.xml
 
-    - name: Upload VCD and image
+    - name: Upload FST and image
       if: always()
       uses: actions/upload-artifact@v4
       with:
-          name: gatelevel_test_vcd
+          name: gatelevel_test_fst
           path: |
-            ${{ inputs.test-dir }}/tb.vcd
+            ${{ inputs.test-dir }}/tb.fst
             ${{ inputs.test-dir }}/results.xml
             ${{ inputs.test-dir }}/frame.png
 
