@@ -43,6 +43,7 @@ runs:
       run: pip install cocotb==1.8.0
 
     - name: Install pillow
+      shell: bash
       run: pip install pillow
 
     - name: Install iverilog
