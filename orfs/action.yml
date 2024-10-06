@@ -28,7 +28,7 @@ runs:
           IHP_PDK_ROOT=${{ github.workspace }}/pdk
           IHP_PDK_COMMIT=69c58d9ba56d8894c1499b2dd2689f5e22692704
           ORFS_ROOT=${{ github.workspace }}/orfs
-          ORFS_COMMIT=ad1c669e5bfaf57b2b6e9c017c7255182d461190
+          ORFS_COMMIT=59c987ce38b9726ef9b69fda704616e53089ea95
         EOF
 
     # Install packages for 'Render PNG from GDS' step:
@@ -84,7 +84,7 @@ runs:
     - name: Check out ORFS
       uses: actions/checkout@v4
       with:
-        repository: The-OpenROAD-Project/OpenROAD-flow-scripts
+        repository: mole99/OpenROAD-flow-scripts
         ref: ${{ env.ORFS_COMMIT }}
         path: ${{ env.ORFS_ROOT }}
 
