@@ -86,10 +86,6 @@ runs:
         repository: mole99/OpenROAD-flow-scripts
         path: ${{ env.ORFS_ROOT }}
 
-    - name: Apply patches to ORFS
-      shell: bash
-      run: patch -p1 -d $ORFS_ROOT < ${{ github.action_path }}/orfs-pending.patch
-
     - name: Check out IHP PDK
       uses: actions/checkout@v4
       with:
